@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Fix</title>
+</head>
+<body>
+    <h2 id="h22">Hello</h2>
+    <p class="para"></p>
+    <p class="para"></p>
+    <p>Click here to see magic:</p>
+    <button id="btn2">Click me</button>
+
+    <script>
+        // Select button
+        const btn = document.getElementById("btn2");
+
+        btn.addEventListener("click", function() {
+            alert("Button clicked");
+        });
+
+        // Select h2 element correctly and change color
+        const hd = document.getElementById("h22");
+        hd.style.color = "red";
+
+        // Select first paragraph with class "para" and update text
+        const my_para = document.getElementsByClassName("para");
+        if (my_para.length > 0) { // Ensure at least one element exists
+            my_para[0].innerHTML = "I LOVE CODING";
+            my_para[1].textContent = "Python, JS my best programming language";
+            my_para[0].style.color = "blue";
+        }
+    </script>
+</body>
+</html>
